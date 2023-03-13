@@ -31,6 +31,7 @@ VilEZ(빌리지)
 |---|---|---|---|---|
 |![javascript](./preview_image/javascript.png)|![react](./preview_image/react.png)|![recoil](./preview_image/recoil.png)|![emotion](./preview_image/emotion.png)|![axios](./preview_image/axios.png)|
 
+
 ### 메인 페이지
 -   서비스 소개
 ![](./preview_image/메인페이지.gif)
