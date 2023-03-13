@@ -1,92 +1,85 @@
-# Front-End
+## VilEZ
 
+```markdown
+잠깐 필요한 물품이 없어 곤란했던 경험.
+당장 쓰지 않는 물건을 빌려줘서
+이웃이 기뻐하는 모습.
 
+이 모습을 경험한다면 어떻게 될까요?
+이웃끼리 따뜻함도 공유되지 않을까요?
 
-## Getting started
+빌리지의 이웃들과 함께
+공유하기를 통해 물품을 빌려주고,
+요청하기를 통해 물품을 빌려보세요.
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
-
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
-
-## Add your files
-
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
-
-```
-cd existing_repo
-git remote add origin https://lab.ssafy.com/D111/front-end.git
-git branch -M master
-git push -uf origin master
+VilEZ(빌리지)
 ```
 
-## Integrate with your tools
 
-- [ ] [Set up project integrations](https://lab.ssafy.com/D111/front-end/-/settings/integrations)
 
-## Collaborate with your team
+## 프로젝트 소개
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Automatically merge when pipeline succeeds](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+### 개요
+- 삼성청년소프트웨어아카데미(SSAFY) 2학기 공통프로젝트(웹디자인)에서 만든 프로젝트
+- 총 6명 ( 프론트엔드 3명, 백엔드 2명, 모바일 1명)
+    
+### 주제
+- 이웃주민과 소통이 단절된 현대사회에서 서로 필요한 물품을 공유하고, 요청하는 플랫폼을 만들어 지역사회를 따뜻하게 만들려고 함
 
-## Test and Deploy
 
-Use the built-in continuous integration in GitLab.
+|JavaScript|React|recoil|emotion.js|axios|
+|---|---|---|---|---|
+|![javascript](./preview_image/javascript.png)|![react](./preview_image/react.png)|![recoil](./preview_image/recoil.png)|![emotion](./preview_image/emotion.png)|![axios](./preview_image/axios.png)|
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing(SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
+### 메인 페이지
+-   서비스 소개
+![](./preview_image/메인페이지.gif)
 
-***
+### 로그인 / 회원가입
 
-# Editing this README
+-   이메일 - 비밀번호를 사용한 회원가입과 OAuth 2.0을 활용한 소셜 로그인 
+![](./preview_image/로그인.gif)![](./preview_image/회원가입.gif)
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thank you to [makeareadme.com](https://www.makeareadme.com/) for this template.
+### 공유 물품 등록
+-   multipart/form-data로 물품 이미지 업로드
+-   Update 구성 과정에서 사용자가 입력했던 data를 그대로 받아와서 수정할 수 있게 구현함
+ ![](./preview_image/글등록.gif)
 
-## Suggestions for a good README
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+### 공유 물품 목록 페이지
+-   그리드 스타일로 리스트 구성
+-   무한 스크롤을 활용한 사용자 친화적 구성
+![](./preview_image/물품리스트.gif)
 
-## Name
-Choose a self-explaining name for your project.
+### 실시간 채팅 & 지도
+-   Websocket과 STOMP를 활용
+-   실시간으로 1:1 채팅과 kakao map 을 동시에 제어할 수 있음
+![](./preview_image/피공유자-예약.gif)![](./preview_image/공유자-예약.gif)
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+### 공유 박스
+-   현재 진행중 / 진행 예정인 공유 약속 표시
+![](./preview_image/공유박스.gif)
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+### 마이 페이지
+-   사용자 프로필 / 적립 포인트 / 공유 약속
+-   공유 캘린더 / 포인트 내역 / 나의 작성글
+![](./preview_image/마이페이지.gif)
+-   QR코드에 동네 인증 페이지 주소 연결, 모바일로 현재 위치 수집
+![](./preview_image/동네-인증.gif)
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+## 배운 점 & 아쉬운 점
 
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
-
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
-
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
-
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
-
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+-   김종혁
+	-   인내와 끈기, 모르는 부분이나 같이 이야기 해야할 부분에서 백엔드와 프론트간의 소통을 통해 소통능력 향상을 경험할 수 있었습니다.
+	-   상태관리 라이브러리 중 recoil을 사용하여 react에서의 상태관리 방법에 대해서 경험할 수 있었습니다.
+	-   컴포넌트간에 props를 내리는 방식, CRUD 중 U를 구성하는 것에 있어서 formData에 file형식으로 담겨가야 한다는 것을 빨리 알지 못해서 아쉬웠습니다.
+-   김현영
+	- 메인 페이지의 스크롤 애니메이션을 직접 구현하며 
+	-  소셜 로그인을 구현하며 OAuth 2.0의 동작 과정을 이해할 수 있었습니다.
+	- React의 lifecycle과 hook을 사용하며 CSR의 동작 과정을 이해할 수 있었습니다.
+	- 프론트 구현 과정에서 필요한 API를 요청하며 백엔드와의 협업 방식을 경험하고 효율적인 의사소통 방식에 대해 고민할 수 있었습니다.
+	- 성능 최적화, SEO 등 프로젝트 구현 초기에 짚고 넘어가야 할 사항에 대해 알 수 있었습니다.
+-   사공지은
+	-   API나 라이브러리의 공식 문서를 보는 데 능숙해지고, 이를 활용해 많은 궁금증과 오류를 해결할 수 있었습니다.
+	-   recoil 사용법에 대해 공부하고, 이를 활용해 여러 컴포넌트에서 사용되는 데이터들의 관리를 효율적으로 하였습니다.
+	-   axios interceptor에 대해 공부하고, 토큰을 관리하는 법을 터득하였습니다.
+	-   테스트와 디버깅 과정에서 버그를 고치면서, 더 효율적인 컴포넌트 구조에 대해 고민해볼 수 있었습니다.
